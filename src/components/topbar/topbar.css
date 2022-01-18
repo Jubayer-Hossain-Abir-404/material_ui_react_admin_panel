@@ -1,0 +1,45 @@
+.topbar{
+    width:100%;
+    height: 50px;
+    background-color: white;
+}
+
+.topbarWrapper{
+    height: 100%;
+    /* it means that top and bottom 0px and left-right 20px */
+    padding: 0px 20px;
+    /* By using flex two different divs will be set in the same line together */
+    display: flex;
+    /* this centers both the div vertically */
+    /* because of that top and bottom padding is not required
+    because it sets them in the center in the given div size */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 30px;
+    color: darkblue;
+    cursor: pointer;
+}
+
+
+.topbarIconContainer{
+    position: relative;
+}
+
+.topIconBadge{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
