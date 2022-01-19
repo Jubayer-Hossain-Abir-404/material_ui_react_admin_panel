@@ -2,6 +2,12 @@
     width:100%;
     height: 50px;
     background-color: white;
+    position: sticky;
+    top: 0;
+    /* it means it's going to be over every element
+    inside this application
+    other components will never be over this topbar */
+    z-index: 999;
 }
 
 .topbarWrapper{
@@ -24,9 +30,17 @@
     cursor: pointer;
 }
 
+.topRight{
+    display: flex;
+    align-items: center;
+}
+
 
 .topbarIconContainer{
     position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #555;
 }
 
 .topIconBadge{
@@ -34,7 +48,7 @@
     height: 15px;
     position: absolute;
     top: -5px;
-    right: 5px;
+    right: 0px;
     background-color: red;
     color: white;
     border-radius: 50%;
@@ -42,4 +56,11 @@
     align-items: center;
     justify-content: center;
     font-size: 10px;
+}
+
+.topAvatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
 }

@@ -1,0 +1,50 @@
+.sidebar{
+    /* meaning it will take about one unit space */
+    flex: 1;
+    background-color: rgb(251, 251, 255);
+    /* this gets the whole vertical height of a page */
+    /* it gets overflowed */
+    /* height: 100vh; */
+    height: calc(100vh - 50px);
+    /* to keep the sidebar sticky
+    and to keep it under topbar */
+    position: sticky;
+    top: 50px;
+}
+
+.sidebarWrapper{
+    padding: 20px;
+    color: #555;
+}
+
+.sidebarMenu{
+    margin-bottom: 10px;
+}
+
+.sidebarTitle{
+    font-size: 13px;
+    color: rgb(197, 194, 194);
+}
+
+.sidebarList{
+    list-style: none;
+    padding: 5px;
+}
+
+.sidebarListItem{
+    padding: 5px;
+    cursor: pointer;
+    /* this allows the code to be in flexible mode and lets 
+    the item be in center */
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+
+/* sidebar items will be active when hovered */
+.sidebarListItem.active,
+ .sidebarListItem:hover{
+    background-color: rgb(240, 228, 250);
+}
+

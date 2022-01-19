@@ -1,0 +1,10 @@
+.container{
+    /* makes two different lines inline */
+    display: flex;
+}
+
+.others{
+    /* this means it will be 4 times bigger than the sidebar */
+    flex: 4;
+    /* background-color: darkcyan; */
+}
