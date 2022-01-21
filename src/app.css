@@ -1,6 +1,7 @@
 .container{
     /* makes two different lines inline */
     display: flex;
+    margin-top: 10px;
 }
 
 /* .others{
