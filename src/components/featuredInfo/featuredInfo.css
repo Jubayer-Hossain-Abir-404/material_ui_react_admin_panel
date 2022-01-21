@@ -1,0 +1,23 @@
+.featured{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.featuredItem{
+    /* so that the items will be in the 
+    same size */
+    flex: 1;
+    margin: 0px 20px;
+    padding: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    /* This is used to create box shadow */
+    /* offset: the amount or distance by which something is out of line.
+    First value is horizontal offset meaning by the right side
+    First value is vertical offset meaning by the bottom side
+    The optional third value adds a blur effect to the shadow.
+    The optional fourth value defines the spread of the shadow. */
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+     box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
