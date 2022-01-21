@@ -1,56 +1,20 @@
 import "./chart.css";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { 
+  LineChart, 
+  Line, 
+  XAxis, 
+  // YAxis, 
+  CartesianGrid, 
+  Tooltip, 
+  // Legend, 
+  ResponsiveContainer 
+} from 'recharts';
 
-export default function Chart() {
-    const data = [
-        {
-          name: 'Page A',
-          "Active User": 4000,
-          pv: 2400,
-          amt: 2400,
-        },
-        {
-          name: 'Page B',
-          "Active User": 3000,
-          pv: 1398,
-          amt: 2210,
-        },
-        {
-          name: 'Page C',
-          "Active User": 2000,
-          pv: 9800,
-          amt: 2290,
-        },
-        {
-          name: 'Page D',
-          "Active User": 2780,
-          pv: 3908,
-          amt: 2000,
-        },
-        {
-          name: 'Page E',
-          "Active User": 1890,
-          pv: 4800,
-          amt: 2181,
-        },
-        {
-          name: 'Page F',
-          "Active User": 2390,
-          pv: 3800,
-          amt: 2500,
-        },
-        {
-        //   page G contains inverted comma becasue of the space
-          name: 'Page G',
-        //   as active user contains a space thats why there is inverted comma 
-          "Active User": 3490,
-          pv: 4300,
-          amt: 2100,
-        },
-      ];
+export default function Chart({ title, data, dataKey, grid }) {
+    
   return <div className="chart">
       <h3 className="chartTitle">
-          User Analytics
+          { title }
       </h3>
        {/* here aspect means if the width will be 4 unit then height
       will be 1 unit  */}
@@ -60,9 +24,13 @@ export default function Chart() {
                 {/* datakey comes from the above data */}
                 <XAxis dataKey="name" stroke="#5550bd" />
                 {/* <YAxis /> */}
-                <Line type="monotone" dataKey="Active User" stroke="#5550bd"  />
+                {/* datakey means which data is being used */}
+                <Line type="monotone" dataKey={dataKey} stroke="#5550bd"  />
                 <Tooltip />
-                <CartesianGrid stroke="#e0dfdf"/>
+                {/* strokeDasharray 5 5 creates a dash type grid */}
+                {grid && <CartesianGrid stroke="#e0dfdf" strokeDasharray="5 5"/>}
+                {/* Legend shows the property which proprty is actaully is being used */}
+                {/* <Legend /> */}
             </LineChart>
       </ResponsiveContainer>
   </div>;
